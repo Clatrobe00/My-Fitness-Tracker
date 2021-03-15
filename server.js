@@ -22,6 +22,6 @@ require("./routes/htmlRoutes")(app);
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/imageperformance");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout");
 
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
