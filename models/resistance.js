@@ -5,6 +5,7 @@ const resistanceSchema = new Schema({
     type: {
         type: String,
         required: true,
+        enum: ["resistance", "cardio"],
     },
     name: {
         type: String,
@@ -29,7 +30,7 @@ const resistanceSchema = new Schema({
     },
     duration: {
         type: Number,
-        min: 60,
+        max: 60,
     },
 });
 
