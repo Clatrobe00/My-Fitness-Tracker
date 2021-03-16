@@ -15,7 +15,6 @@ const workoutSchema = new Schema({
         name: {
             type: String,
             required: true,
-            unique: true,
             maxLength: [50, "Exercise name must be shorter than fifty characters."],
         },
         weight: {
