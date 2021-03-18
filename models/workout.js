@@ -53,15 +53,8 @@ workoutSchema.virtual('totalDuration')
             totalDuration += ex.duration;
         })
         return totalDuration;
-        //.reduce((function (acc, cur) {
-            // console.log('duration is', cur);
-            // return acc + cur.duration
      });
-        //)
-    //})
 
 const Workout = mongoose.model("Workout", workoutSchema);
-
-
 
 module.exports = Workout;
