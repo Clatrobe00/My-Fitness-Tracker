@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
+const opts = { toJSON: { virtuals: true } }
 const workoutSchema = new Schema({
     day: {
         type: Date,
@@ -16,6 +16,7 @@ const workoutSchema = new Schema({
             type: String,
             required: true,
             maxLength: [50, "Exercise name must be shorter than fifty characters."],
+            minLength: [2, "Name must be at least 2 characters."],
         },
         weight: {
             type: Number,
@@ -43,8 +44,20 @@ const workoutSchema = new Schema({
             required: false,
         },
     }],
-});
+}, opts);
+
+workoutSchema.virtual('totalDuration')
+    .get(function () {
+        return this.exercises[0].duration;
+        //.reduce((function (acc, cur) {
+            // console.log('duration is', cur);
+            // return acc + cur.duration
+     });
+        //)
+    //})
 
 const Workout = mongoose.model("Workout", workoutSchema);
+
+
 
 module.exports = Workout;
