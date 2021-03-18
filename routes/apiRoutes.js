@@ -18,8 +18,7 @@ module.exports = (app) => {
 
     app.get("/api/workouts/range", async (req, res) => {
         let stats = await db.Workout.find({});
-        console.log(stats);
+        stats = stats.slice(Math.max(stats.length - 7, 0))
         res.json(stats);
-        console.log('range accessed');
     })
 }
