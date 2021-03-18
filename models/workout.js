@@ -48,7 +48,11 @@ const workoutSchema = new Schema({
 
 workoutSchema.virtual('totalDuration')
     .get(function () {
-        return this.exercises[0].duration;
+        let totalDuration = 0
+        this.exercises.forEach(function (ex) {
+            totalDuration += ex.duration;
+        })
+        return totalDuration;
         //.reduce((function (acc, cur) {
             // console.log('duration is', cur);
             // return acc + cur.duration
