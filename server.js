@@ -23,7 +23,7 @@ require("./routes/htmlRoutes")(app);
 const PORT = process.env.PORT || 3000;
 //mongodb+srv://Clatrobe:L1feT1tan@clb-cluster.ahz85.mongodb.net/fitnessTrackerDB?retryWrites=true&w=majority
 //"mongodb://localhost/fitnessTrackerDB"
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Clatrobe:L1feT1tan@clb-cluster.ahz85.mongodb.net/fitnessTrackerDB?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitnessTrackerDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
