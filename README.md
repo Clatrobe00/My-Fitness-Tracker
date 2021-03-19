@@ -1,61 +1,53 @@
-# Unit 17 NoSQL Homework: Workout Tracker
+# Fitness-Tracker
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+https://opensource.org/licenses/MIT
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+## Description
 
-## User Story
+This is an exercise tracking application that allows the user to enter workouts for different days and view their total duration and weight lifted.
+      
+## Table of Contents 
+      
+* [Installation](#installation)
+      
+* [Usage](#usage)
+      
+* [Contributing](#contributing)
+      
+* [Tests](#tests)
+      
+* [Questions](#questions)
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+* [License](#license)
+      
+## Installation
 
-## Business Context
+npm i to install all dependencies. npm run seed to seed local database.
+      
+## Usage
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+The user may view their workouts from the past week by clicking on "Dashboard" While the user is on the Fitness Dashboard page, they will be able to see their most recent workout statistics, as well as either continue the most recent workout or create a new one.
+        
+## Contributing
 
-## Acceptance Criteria
+If you'd like to contribute to the project, make a pull request with a description of your contribution.
+      
+## Tests
+      
+To run tests, run the following command:
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+test
+      
+## Questions
 
-The user should be able to:
+For questions regarding this repo contact me at charlie.bateman117@gmail.com or visit my repository at https://github.com/Clatrobe00/My-Fitness-Tracker
 
-  * Add exercises to the most recent workout plan. YES
+## License
 
-  * Add new exercises to a new workout plan. YES
+Copyright 2021 undefined
 
-  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
-
-  * View the total duration of each workout from the past seven workouts on the `stats` page.
-
-> **Important:** Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/), the [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/), and the [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
-
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
-
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
-
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We want you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
